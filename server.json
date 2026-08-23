@@ -1,6 +1,6 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.exclusiveyon-a11y/reevl-mcp",
+  "name": "kr.co.reevl/reevl-mcp",
   "title": "Reevl — Korean Real Estate",
   "description": "Query 45,000+ Korean apartment complexes: official transaction prices, jeonse ratios, trade volume, location scores and Reevl AI price forecasts. Read-only, no auth.",
   "version": "1.0.0",
