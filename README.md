@@ -30,18 +30,20 @@ Claude, ChatGPT 등 원격 MCP를 직접 지원하는 곳은 URL만 넣으면 �
 
 ### stdio만 지원하는 호스트
 
-이 저장소의 브리지를 씁니다. 설치할 것이 없습니다(Node 18+).
+이 저장소의 브리지를 씁니다.
 
 ```json
 {
   "mcpServers": {
     "reevl": {
       "command": "npx",
-      "args": ["-y", "reevl-mcp"]
+      "args": ["-y", "github:exclusiveyon-a11y/reevl-mcp"]
     }
   }
 }
 ```
+
+npm에 올리지 않았습니다 — 이 저장소에서 바로 실행됩니다(Node 18+).
 
 브리지가 하는 일은 하나입니다 — MCP 2026-07-28 사양이 요구하는
 `MCP-Protocol-Version`·`Mcp-Method`·`Mcp-Name` 헤더를 본문과 맞춰 붙입니다.

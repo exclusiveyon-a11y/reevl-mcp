@@ -10,15 +10,5 @@
       "type": "streamable-http",
       "url": "https://reevl.co.kr/api/mcp"
     }
-  ],
-  "packages": [
-    {
-      "registryType": "npm",
-      "identifier": "reevl-mcp",
-      "version": "1.0.0",
-      "transport": {
-        "type": "stdio"
-      }
-    }
   ]
 }
