@@ -1,0 +1,13 @@
+{
+  "name": "reevl-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for Korean apartment real-estate data — 45,000+ complexes, official transaction prices, jeonse ratios and Reevl AI price forecasts.",
+  "keywords": ["mcp", "model-context-protocol", "real-estate", "korea", "부동산", "아파트", "reevl"],
+  "homepage": "https://reevl.co.kr/mcp",
+  "license": "MIT",
+  "type": "module",
+  "bin": {"reevl-mcp": "bin/reevl-mcp.mjs"},
+  "files": ["bin"],
+  "engines": {"node": ">=18"},
+  "repository": {"type": "git", "url": "git+https://github.com/exclusiveyon-a11y/reevl-mcp.git"}
+}
