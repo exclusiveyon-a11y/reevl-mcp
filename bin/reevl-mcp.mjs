@@ -58,9 +58,17 @@ async function forward(msg) {
   }
 }
 
+// ★★들어온 순서대로 하나씩 처리하고, **큐가 빈 뒤에** 종료한다.
+//   처음엔 stdin의 'end'에서 곧장 process.exit(0)을 했는데, 그러면 응답을 기다리지 않고 죽는다 —
+//   파이프로 두 줄을 넣으면 첫 줄만 나오고 둘째 줄이 통째로 사라졌다.
+//   ★호스트가 프로세스를 계속 띄워 두는 실사용에서는 안 드러나고 테스트에서만 보이는 종류다.
+//   ★순차 처리로 두는 이유: MCP는 id로 응답을 짝지으므로 병렬이어도 되지만, 순서가 섞이면
+//     사람이 로그를 읽을 때 원인을 못 쫓는다. 이 다리는 초당 수백 건을 나를 물건이 아니다.
+let queue = Promise.resolve();
+
 let buf = '';
 process.stdin.setEncoding('utf8');
-process.stdin.on('data', async (chunk) => {
+process.stdin.on('data', (chunk) => {
   buf += chunk;
   let i;
   while ((i = buf.indexOf('\n')) >= 0) {
@@ -70,10 +78,10 @@ process.stdin.on('data', async (chunk) => {
     let msg;
     try { msg = JSON.parse(line); }
     catch { write({jsonrpc: '2.0', id: null, error: {code: -32700, message: 'Parse error'}}); continue; }
-    try { await forward(msg); }
-    catch (e) {
-      write({jsonrpc: '2.0', id: msg.id ?? null, error: {code: -32603, message: String(e).slice(0, 200)}});
-    }
+    const m = msg;
+    queue = queue.then(() => forward(m)).catch((e) => {
+      write({jsonrpc: '2.0', id: m.id ?? null, error: {code: -32603, message: String(e).slice(0, 200)}});
+    });
   }
 });
-process.stdin.on('end', () => process.exit(0));
+process.stdin.on('end', () => { queue.then(() => process.exit(0)); });
