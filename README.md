@@ -2,8 +2,8 @@
 
 <a href="https://reevl.co.kr/mcp">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/reevl-wordmark-dark.svg">
-    <img src="assets/reevl-wordmark-light.svg" alt="Reevl 리블" width="248">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/reevl-mark-dark.svg">
+    <img src="assets/reevl-mark-light.svg" alt="Reevl" width="92">
   </picture>
 </a>
 
