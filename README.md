@@ -1,13 +1,31 @@
-# Reevl MCP
+<div align="center">
 
-한국 아파트 실거래 데이터를 AI에서 바로 질의하는 [MCP](https://modelcontextprotocol.io) 서버입니다.
-전국 아파트 **45,000여 개**의 실거래 시세·전세가율·거래량·입지 점수와 리블 AI 가격 예측을 제공합니다.
+<a href="https://reevl.co.kr/mcp">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/reevl-wordmark-dark.svg">
+    <img src="assets/reevl-wordmark-light.svg" alt="Reevl 리블" width="248">
+  </picture>
+</a>
 
-무료이고 인증이 없습니다. 읽기 전용입니다.
+<h3>Reevl MCP</h3>
 
-```
-https://reevl.co.kr/api/mcp
-```
+<p>
+  한국 아파트 실거래 데이터를 AI에서 바로 질의하는 <a href="https://modelcontextprotocol.io">MCP</a> 서버<br>
+  전국 아파트 <b>45,000여 개</b>의 시세 · 전세가율 · 거래량 · 입지 점수와 <b>리블 AI 가격 예측</b>
+</p>
+
+<p>
+  <a href="https://reevl.co.kr/mcp"><img alt="MCP Registry: kr.co.reevl/reevl-mcp" src="https://img.shields.io/badge/MCP%20Registry-kr.co.reevl%2Freevl--mcp-3182F6?style=flat-square&labelColor=191F28"></a>
+  <img alt="MCP spec 2026-07-28 dual-era" src="https://img.shields.io/badge/spec-2026--07--28%20dual--era-4E5968?style=flat-square&labelColor=191F28">
+  <img alt="무료 · 인증 없음 · 읽기 전용" src="https://img.shields.io/badge/free-no%20auth%20%C2%B7%20read--only-16A34A?style=flat-square&labelColor=191F28">
+  <a href="LICENSE"><img alt="License MIT" src="https://img.shields.io/badge/license-MIT-6B7280?style=flat-square&labelColor=191F28"></a>
+</p>
+
+<p><code>https://reevl.co.kr/api/mcp</code></p>
+
+<sub><a href="https://reevl.co.kr">리블 홈</a> · <a href="https://reevl.co.kr/mcp">연결 안내</a> · <a href="https://reevl.co.kr/data">데이터 출처·현황</a> · <a href="https://reevl.co.kr/api/v1/openapi.json">REST(OpenAPI)</a></sub>
+
+</div>
 
 ---
 
